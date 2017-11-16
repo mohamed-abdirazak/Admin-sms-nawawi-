@@ -446,7 +446,7 @@ $studentname =$rows['studentname'];
       <td  contenteditable="false"  style="background-color:#bae3e2;color:black" id="" class="id" value="<?php echo $rows['ID'];?>"><?php echo $rows['ID'];?> </td>
       <td contenteditable="false" style="background-color:#ecfd79" class="studentname" value=" <?php echo $rows['studentname'];?>"><?php echo $rows["studentname"]; ?></td> 
       <td contenteditable="true" class="rollno"></td>
-      <td contenteditable="true" class="att">
+      <td contenteditable="false" class="att">
                   <select class="form-control" style="height:28px;font-size:12px"  id="att" name="att" required>	
                   <option value="absent" > Select</option>							
                   <option value="present">Present</option>
