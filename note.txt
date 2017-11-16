@@ -1,0 +1,202 @@
+SELECT COUNT(gender) FROM `registration` WHERE gender='male'
+SELECT COUNT(gender) FROM `registration` WHERE gender='Female' 
+SELECT COUNT(ID) FROM registration
+SELECT MAX(average) FROM `exam`
+SELECT sum(amount) FROM `fee`
+
+
+
+<script>
+$('#att_save').click(function(event){
+  event.preventDefault();
+ 
+    var id = [];
+    var studentname = [];
+    var day_1 = [];
+    var day_2 = [];
+    var day_3 = [];
+    var day_4 = [];
+    var day_5 = [];
+    var day_6 = [];
+    var day_7 = [];
+    var day_8 = [];
+    var day_9 = [];
+    var day_10 = [];
+    var day_11 = [];
+    var day_12 = [];
+    var day_13 = [];
+    var day_14 = [];
+    var day_15 = [];
+    var day_16 = [];
+    var day_17 = [];
+    var day_18 = [];
+    var day_19 = [];
+    var day_20 = [];
+    var day_21 = [];
+    var day_22 = [];
+    var day_23 = [];
+    var day_24 = [];
+    var day_25 = [];
+    var day_26 = [];
+    var day_27 = [];
+    var day_28 = [];
+    var day_29 = [];
+    var day_30 = [];
+    var day_31 = [];
+   
+    $('.id').each(function(){
+     id.push($(this).text());
+    });
+    $('.studentname').each(function(){
+      studentname.push($(this).text());
+    });
+    $('.day_1').each(function(){
+      day_1.push($(this).text());
+    });
+    $('.day_2').each(function(){
+      day_2.push($(this).text());
+    });
+    $('.day_3').each(function(){
+      day_3.push($(this).text());
+    });
+    $('.day_4').each(function(){
+      day_4.push($(this).text());
+    });
+    $('.day_5').each(function(){
+      day_5.push($(this).text());
+    });
+    $('.day_6').each(function(){
+      day_6.push($(this).text());
+    });
+    $('.day_7').each(function(){
+      day_7.push($(this).text());
+    });
+    $('.day_8').each(function(){
+      day_8.push($(this).text());
+    });
+    $('.day_9').each(function(){
+      day_9.push($(this).text());
+    });
+    $('.day_10').each(function(){
+      day_10.push($(this).text());
+    });
+    $('.day_11').each(function(){
+      day_11.push($(this).text());
+    });
+    $('.day_12').each(function(){
+      day_12.push($(this).text());
+    });
+    $('.day_13').each(function(){
+      day_13.push($(this).text());
+    });
+    $('.day_14').each(function(){
+      day_14.push($(this).text());
+    });
+    $('.day_15').each(function(){
+      day_15.push($(this).text());
+    });
+    $('.day_16').each(function(){
+      day_16.push($(this).text());
+    });
+    $('.day_17').each(function(){
+     day_17.push($(this).text());
+    });
+    $('.day_18').each(function(){
+     day_18.push($(this).text());
+    });
+    $('.day_19').each(function(){
+     day_19.push($(this).text());
+    });
+    $('.day_20').each(function(){
+      day_20.push($(this).text());
+    });
+    $('.day_21').each(function(){
+      day_21.push($(this).text());
+    });
+    $('.day_22').each(function(){
+      day_22.push($(this).text());
+    });
+    $('.day_23').each(function(){
+      day_23.push($(this).text());
+    });
+    $('.day_24').each(function(){
+      day_24.push($(this).text());
+    });
+    $('.day_25').each(function(){
+      day_25.push($(this).text());
+    });
+    $('.day_26').each(function(){
+      day_26.push($(this).text());
+    });
+    $('.day_27').each(function(){
+      day_27.push($(this).text());
+    });
+    $('.day_28').each(function(){
+     day_28.push($(this).text());
+    });
+    $('.day_29').each(function(){
+      day_29.push($(this).text());
+    });
+    $('.day_30').each(function(){
+      day_30.push($(this).text());
+    });
+    $('.day_31').each(function(){
+      day_31.push($(this).text());
+    });
+    // var term = $("#term").val();
+    // var year = $("#year").val();
+    
+  
+
+    $.ajax({
+      
+     url:"student_attendance_code.php",
+     method:"POST",
+     data:{
+       id:id, 
+       studentname:studentname, 
+       day_1:day_1,   
+       day_2:day_2,   
+       day_3:day_3, 
+       day_4:day_4, 
+       day_5:day_5, 
+       day_6:day_6,
+       day_7:day_7, 
+       day_8:day_8, 
+       day_9:day_9, 
+       day_10:day_10,
+       day_11:day_11, 
+       day_12:day_12, 
+       day_13:day_13, 
+       day_14:day_14,
+       day_15:day_15,
+       day_16:day_16, 
+       day_17:day_17, 
+       day_18:day_18,   
+       day_19:day_19,   
+       day_20:day_20, 
+       day_21:day_21, 
+       day_22:day_22, 
+       day_23:day_23,
+       day_24:day_24, 
+       day_25:day_25, 
+       day_26:day_26, 
+       day_27:day_27,
+       day_28:day_28, 
+       day_29:day_29, 
+       day_30:day_30, 
+       day_31:day_31
+       },
+       success:function(data){
+        window.location.href="student_attendance.php";
+        $("td[contentEditable='true']").text("");
+        for(var i=0; i<= count; i++)
+        {
+         $('tr#'+i+'').remove();
+        }
+        fetch_item_data();
+       }
+      });
+     });
+   
+  </script>

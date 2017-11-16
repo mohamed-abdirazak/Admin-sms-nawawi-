@@ -1,0 +1,4 @@
+SELECT exam.exam_id,exam.st_id ,registration.branch,registration.level,registration.classname, 
+exam.math,exam.physics,exam.biology,registration.studentname,registration.section from exam ,
+registration where registration.ID=exam.st_id 
+and registration.studentname=exam.name
