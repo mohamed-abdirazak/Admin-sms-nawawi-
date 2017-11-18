@@ -11,7 +11,6 @@ if(isset($_POST["id"]))
  $year = $_POST["year"];
  $rollno = $_POST["rollno"];
  $att = $_POST["att"];
- 
  $query = '';
  for($count = 0; $count<count($id); $count++)
  {

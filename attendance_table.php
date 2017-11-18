@@ -249,7 +249,7 @@ if(!isset($_SESSION['username'])){
                 </div>
                </div>
                 <div class="col-sm-2 pull-right" style="margin:38px 0 0 0 ;">
-                <a href="attendance_person.php" class="btn" style="background-color:#671609;color:white" role="button">
+                <a href="student_attendance.php" class="btn" style="background-color:#671609;color:white" role="button">
                    <span class="glyphicon glyphicon-plus"></span>  Add New</a>
                    </div>       </div>  
            

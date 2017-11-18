@@ -442,13 +442,12 @@ $studentname =$rows['studentname'];
        
    
       ?>
-       <tr style="background-color:#bae3e2">
+      <tr style="background-color:#bae3e2">
       <td  contenteditable="false"  style="background-color:#bae3e2;color:black" id="" class="id" value="<?php echo $rows['ID'];?>"><?php echo $rows['ID'];?> </td>
       <td contenteditable="false" style="background-color:#ecfd79" class="studentname" value=" <?php echo $rows['studentname'];?>"><?php echo $rows["studentname"]; ?></td> 
       <td contenteditable="true" class="rollno"></td>
-      <td contenteditable="false" class="att">
-                  <select class="form-control" style="height:28px;font-size:12px"  id="att" name="att" required>	
-                  <option value="absent" > Select</option>							
+      <td  contenteditable="false" class="att">
+                  <select class="form-control" style="height:28px;font-size:12px"  id="att" name="att[]">	
                   <option value="present">Present</option>
                   <option value="absent">Absent</option>
                   <option value="leave">Leave</option>
@@ -492,11 +491,12 @@ $studentname =$rows['studentname'];
 </body>
 </html>
 <script>
+
 $('#send').click(function(){
     var id = [];
     var studentname = [];
     var rollno = [];
-    var att = [];
+ 
     $('.id').each(function(){
      id.push($(this).text());
     });
@@ -506,10 +506,10 @@ $('#send').click(function(){
     $('.rollno').each(function(){
       rollno.push($(this).text());
     });
-    $('.att').each(function(){
-      att.push($(this).text());
+    var att = [];
+    $('[name="att[]"]').each(function(){
+        att.push($(this).val());
     });
-   
     var date = $("#date").val();
     var month = $("#month").val();
     var year = $("#year").val();
@@ -527,7 +527,7 @@ $('#send').click(function(){
        att:att
        },
      success:function(data){
-      window.location.href="attendance_table.php";
+   window.location.href="attendance_table.php";
       $("td[contentEditable='true']").text("");
       for(var i=0; i<= count; i++)
       {
