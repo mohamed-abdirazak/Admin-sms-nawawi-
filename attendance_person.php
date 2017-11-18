@@ -22,14 +22,13 @@ $data[1] =$_POST['studentname'];
 $data[2] =$_POST['date'];
 $data[3] =$_POST['month'];
 $data[4] =$_POST['year'];
-$data[5] =$_POST['roll'];
-$data[6] =$_POST['att'];
+$data[5] =$_POST['att'];
 return $data;
 }
 if (isset($_POST['send'])) {
     $info = getData();
-    $sql = "INSERT INTO attendance (st_id,studentname,date,month,year,rollno,att)
-    VALUES ('$info[0]', '$info[1]', '$info[2]','$info[3]','$info[4]','$info[5]','$info[6]')";
+    $sql = "INSERT INTO attendance (st_id,studentname,date,month,year,att)
+    VALUES ('$info[0]', '$info[1]', '$info[2]','$info[3]','$info[4]','$info[5]')";
     
       $search_result = mysqli_query($conn,$sql);
    
@@ -292,7 +291,7 @@ if (isset($_POST['send'])) {
 
   <form role="form" acton="" method="POST">
   <div class="row">
-<div class="col-md-4">
+<div class="col-md-5">
 
 <div class="form-group">
   <label>ID:</label>
@@ -338,20 +337,14 @@ $conn = new mysqli($host,$user,$pswd,$db);
       </script>
   </div> </div>
   
-  <div class="col-md-5">
+  <div class="col-md-6">
   <div class="form-group">
   <label>Student name:</label>
   <input type="text" class="form-control" id="studentname"  name="studentname" placeholder="Student Name"required>
   </div>
   
 </div>
-<div class="col-md-3">
-  <div class="form-group">
-  <label>Roll NO:</label>
-  <input type="text" class="form-control" id="roll"  name="roll" placeholder="Student Roll NO:"required>
-  </div>
-  
-</div>
+
 </div>
 <div class="row">
 <div class="col-md-6">

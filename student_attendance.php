@@ -15,7 +15,7 @@ $studentname = "";
 $date = "";
 $month="";
 $year="";
- $rollno="";
+ 
  $att="";
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
@@ -428,7 +428,7 @@ $studentname =$rows['studentname'];
         <tr>
       <th width="5%">ID</th>
       <th width="40%">Student name</th>
-      <th width="25%">RollNO</th>
+      
       <th width="15%">Attendance</th>
         </tr>
       </thead>
@@ -446,7 +446,7 @@ $studentname =$rows['studentname'];
       <tr style="background-color:#bae3e2">
       <td  contenteditable="false"  style="background-color:#bae3e2;color:black" id="" class="id" value="<?php echo $rows['ID'];?>"><?php echo $rows['ID'];?> </td>
       <td contenteditable="false" style="background-color:#ecfd79" class="studentname" value=" <?php echo $rows['studentname'];?>"><?php echo $rows["studentname"]; ?></td> 
-      <td contenteditable="true" class="rollno"></td>
+      
       <td  contenteditable="false" class="att">
                   <select class="form-control" style="height:28px;font-size:12px"  id="att" name="att[]">	
                   <option value="present">Present</option>
@@ -496,7 +496,7 @@ $studentname =$rows['studentname'];
 $('#send').click(function(){
     var id = [];
     var studentname = [];
-    var rollno = [];
+    
  
     $('.id').each(function(){
      id.push($(this).text());
@@ -504,9 +504,7 @@ $('#send').click(function(){
     $('.studentname').each(function(){
       studentname.push($(this).text());
     });
-    $('.rollno').each(function(){
-      rollno.push($(this).text());
-    });
+    
     var att = [];
     $('[name="att[]"]').each(function(){
         att.push($(this).val());
@@ -524,7 +522,6 @@ $('#send').click(function(){
        date:date,  
        month:month,    
        year:year,
-       rollno:rollno, 
        att:att
        },
      success:function(data){

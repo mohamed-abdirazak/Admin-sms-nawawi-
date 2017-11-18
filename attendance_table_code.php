@@ -15,7 +15,6 @@ $studentname="";
 $date="";
 $month="";
 $year="";
-$roll="";
 $att="";
 
 
@@ -73,7 +72,7 @@ if(mysqli_num_rows($result) > 0)
                 <tr>
        <thead style="background-color:#671609;color:white; font-size:13px;">
       <th>St_ID</th>
-      <th>RollNO</th>
+      
       <th style="padding-right:120px" >StudentName</th>
        <th style="padding-right:7%">Date</th>
        <th style="padding-right:7%">Year</th>
@@ -93,7 +92,7 @@ if(mysqli_num_rows($result) > 0)
 <tr>
                
                 <td><?php echo $row['st_id'] ?></td>
-                <td><?php echo $row['rollno'] ?></td>
+                
                     <td><?php echo $row["studentname"] ?></td>
                     <td><?php echo $row['date'] ?></td>
                      <td><?php echo $row['year'] ?></td>
@@ -139,10 +138,7 @@ if(mysqli_num_rows($result) > 0)
     <div class="form-group">
     <label>Attendance date:</label>
     <input type="date" class="form-control" id="#edit-<?php echo $row['st_id']; ?>" value="<?php echo $row['date']; ?>" style="width:200px;" name="date" id="date">
-    </div><br><br>
-    <label>RollNO:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="number" class="form-control"  id="#edit-<?php echo $row['st_id']; ?>" value="<?php echo $row['rollno']; ?>" style="width:180px" name="rollno" id="rollno">
-    
+    </div><br><br> 
     <label>Year :</label>
     <select class="form-control" id="year"  style="width:200px; height:; font-size:13px;" id="#edit-<?php echo $row['st_id']; ?>"  name="year" >
    <!-- <option selected disabled> Select Year</option> -->
@@ -187,9 +183,9 @@ if(mysqli_num_rows($result) > 0)
    <option> 2027/2028 </option>
    <option> 2028/2029 </option>
    <option> 2030/2031 </option></select>
-    <br><br>
+   
     <label>Attendance:</label>
-    <select class="form-control" id="att" name="att"  id="#edit-<?php echo $row['st_id']; ?>">								
+    <select class="form-control" style="width:200px;" id="att" name="att"  id="#edit-<?php echo $row['st_id']; ?>">								
     <option>  <?php echo $row['att'];?></option>
   
     <option value="present">Present</option>

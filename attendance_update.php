@@ -25,18 +25,18 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
         $date = "";
         $month="";
         $year="";
-         $rollno="";
+         
          $att="";
 
 $studentname = $_POST['studentname'];
 $month = $_POST['month'];
 $date= $_POST['date'];
 $year= $_POST['year'];
-$rollno = $_POST['rollno'];
+
 $att = $_POST['att'];   
        
 
-$sql1 = "UPDATE attendance SET  studentname= '$studentname',date= '$date',month= '$month',year= '$year',rollno= '$rollno', att= '$att' WHERE st_id = '$st_id'";
+$sql1 = "UPDATE attendance SET  studentname= '$studentname',date= '$date',month= '$month',year= '$year', att= '$att' WHERE st_id = '$st_id'";
       if($conn->query($sql1)===TRUE) {
           header("location:attendance_table.php");
         }
