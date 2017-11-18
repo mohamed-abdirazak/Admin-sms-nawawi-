@@ -285,8 +285,9 @@ background-color:#ac6007;
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="attendance_person.php"><i class="fa fa-file"></i>Attendance Setup</a></li>
+          <li><a href="attendance_person.php"><i class="fa fa-file"></i>Attendance indivitual</a></li>
           <li><a href="attendance_table.php"><i class="fa fa-table"></i>Attendance list </a></li>
+          <li><a href="student_attendance.php"><i class="fa fa-table"></i>Attendance by class </a></li>
       </ul>
         </li>
         <li class="treeview">
