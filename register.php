@@ -176,123 +176,123 @@ $result= $conn->query($sql);
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Nawawi school</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> educated</a>
-        </div>
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
-      
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview"><a href="#"><i class="fa fa-dashboard">
-          </i> <span>Dashboard</span><span class="pull-right-container"></span></a>
-        </li>
-        <li class="treeview">
+      <div class="pull-left info">
+        <p>Nawawi school</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> educated</a>
+      </div>
+    </div>
+    
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header">MAIN NAVIGATION</li>
+      <li class="active treeview"><a href="#"><i class="fa fa-dashboard">
+        </i> <span>Dashboard</span><span class="pull-right-container"></span></a>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-edit"></i>
+          <span>Student Info</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="register.php"><i class="fa fa-user-plus"  style="color:white"></i> Registration</a></li>
+          <li><a href="searchsbyid.php"><i class="fa fa-search" style="color:red"></i> student search: (BYID)</a></li>
+          <li><a href="searchclass.php"><i class="fa fa-search-plus" style="color:#f661d8" ></i> search: (by class)</a></li>
+          <li><a href="modifyy.php"><i class="fa fa-reorder" style="color:#fcff14" ></i> Student list</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i>
-            <span>Student Info</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-            </span>
+              <i class="fa fa-etsy"></i> <span>Examination Info</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right" style="color:white"></i>
+              </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="register.php"><i class="fa fa-circle-o"></i> Registration</a></li>
-            <li><a href="searchsbyid.php"><i class="fa fa-circle-o"></i> student search: (BYID)</a></li>
-            <li><a href="searchclass.php"><i class="fa fa-circle-o"></i> search: (by class)</a></li>
-            <li><a href="modifyy.php"><i class="fa fa-circle-o"></i> Student List</a></li>
+            <li><a href="exam.php"><i class="fa fa-plus-square-o"   style="color:white"></i> Exam Register</a></li>
+            <li><a href="table_exam.php"><i class="fa fa-table"  style="color:#dbed79"></i>  Exam List </a></li>
+            <li><a href="exam_person.php"><i class="fa fa-edit"  style="color:#f661d8"></i>  Exam Register: (indivital)</a></li>
+            <li><a href="exam_class.php"><i class="fa fa-search"  style="color:#fcff14"></i>  Exam Search: (by class)</a></li>
           </ul>
         </li>
-        <li class="treeview">
-            <a href="#">
-                <i class="fa fa-th"></i> <span>Examination Info</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="exam.php"><i class="fa fa-circle-o"></i> Exam register</a></li>
-              <li><a href="table_exam.php"><i class="fa fa-circle-o"></i>Exam list </a></li>
-              <li><a href="exam_person.php"><i class="fa fa-circle-o"></i> Exam Register: (indivital)</a></li>
-              <li><a href="exam_class.php"><i class="fa fa-circle-o"></i>Exam Search: (by class)</a></li>
-            </ul>
-          </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-money"></i>
-            <span>financial Info</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="fee_setup.php"><i class="fa fa-circle-o"></i> Fee payment</a></li>
-          <li><a href="fee_group.php"><i class="fa fa-circle-o"></i>Fee payment (Class) </a></li>
-          <li><a href="fee_search_class.php"><i class="fa fa-circle-o"></i>Fee search (by class)</a></li>
-          <li><a href="fee_table.php"><i class="fa fa-circle-o"></i>Fee list </a></li>
-      </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-user"></i>
-            <span>Teacher Info</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="teacher_register.php"><i class="fa fa-circle-o"></i> Teacher Registration</a></li>
-              <li><a href="teacher_table.php"><i class="fa fa-circle-o"></i>Teacher list </a></li>
-          </ul>
-        </li>
-             
-        <li class="treeview">
-          <a href="#">
-       <i class="fa fa-book"></i>
-            <span>Courses Info</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="course.php"><i class="fa fa-book"></i>Course Info</a></li>
-              <!-- <li><a href="course_table.php"><i class="fa fa-table"></i>course list </a></li> -->
-          </ul>
-        </li>
-    <li class="treeview">
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>Attendances Info</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="attendance_person.php"><i class="fa fa-file"></i>Attendance indivitual</a></li>
-          <li><a href="attendance_table.php"><i class="fa fa-table"></i>Attendance list </a></li>
-          <li><a href="student_attendance.php"><i class="fa fa-table"></i>Attendance by class </a></li>
-      </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i>
-            <span>Time table </span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="time.php"><i class="fa fa-table"></i>Time table Setup</a></li>
-              <li><a href="time_table_class_search.php"><i class="fa fa-table"></i>Time Table  search class</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-money"></i>
+          <span>financial Info</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+        <li><a href="fee_setup.php"><i class="fa fa-money"  style="color:lightgreen"></i> Fee register</a></li>
+        <li><a href="fee_group.php"><i class="fa fa-file-text"  style="color:#ffc845"></i> Fee register (Class) </a></li>
+        <li><a href="fee_search_class.php"><i class="fa fa-search" style="color:#f661d8"></i>  Fee search (by class)</a></li>
+        <li><a href="fee_table.php"><i class="fa fa-clone" style="color:#fcff14"></i>  Fee table </a></li>
+    </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Teacher Info</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="teacher_register.php"><i class="fa fa-user-o" style="color:#f661d8"></i> Teacher Registration</a></li>
+            <li><a href="teacher_table.php"><i class="fa fa-clone" style="color:#fcff14"></i>Teacher List </a></li>
+        </ul>
+      </li>
+           
+      <li class="treeview">
+        <a href="#">
+     <i class="fa fa-book"></i>
+          <span>Courses Info</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="course.php"><i class="fa fa-book" style="color:#fcff14"></i>Course Info</a></li>
+            <!-- <li><a href="course_table.php"><i class="fa fa-table"></i>course list </a></li> -->
+        </ul>
+      </li>
+  <li class="treeview">
+        <a href="#">
+          <i class="fa fa-check"></i>
+          <span>Attendances Info</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+        <li><a href="attendance_person.php"><i class="fa fa-check-square-o" style="color:#f661d8"></i>Attendance indivitual</a></li>
+        <li><a href="attendance_table.php"><i class="fa fa-building-o" style="color:#fcff14"></i>Attendance list </a></li>
+        <li><a href="student_attendance.php"><i class="fa fa-check" style="color:#00ffd8"></i>Attendance by class </a></li>
+    </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-table"></i>
+          <span>Time table </span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right" style="color:white"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="time.php"><i class="fa fa-comment-o" style="color:#00ffd8"></i>Time table Setup</a></li>
+            <li><a href="time_table_class_search.php"><i class="fa fa-table"style="color:#c6ff00"></i>Time Table  search class</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
     <!-- /.sidebar -->
   </aside>
 
