@@ -3,7 +3,7 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
 
   if (isset($_GET['idd'])) {
     $idd = $_GET['idd'];
-    $sql= "DELETE FROM attendance WHERE st_id ='$idd'";
+    $sql= "DELETE FROM attendance WHERE att_id ='$idd'";
      if ($conn->query($sql)===TRUE) {?>
         <script>
         alert("data deleted successfuly");
@@ -20,7 +20,8 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
     }
 
     if(isset($_POST['update_att'])) {
-        $st_id = $_POST['st_id'];
+        
+        $att_id = $_POST['att_id'];
         $studentname = "";
         $date = "";
         $month="";
@@ -32,11 +33,10 @@ $studentname = $_POST['studentname'];
 $month = $_POST['month'];
 $date= $_POST['date'];
 $year= $_POST['year'];
-
 $att = $_POST['att'];   
        
 
-$sql1 = "UPDATE attendance SET  studentname= '$studentname',date= '$date',month= '$month',year= '$year', att= '$att' WHERE st_id = '$st_id'";
+$sql1 = "UPDATE attendance SET  studentname= '$studentname',date= '$date',month= '$month',year= '$year', att= '$att' WHERE att_id='$att_id'";
       if($conn->query($sql1)===TRUE) {
           header("location:attendance_table.php");
         }

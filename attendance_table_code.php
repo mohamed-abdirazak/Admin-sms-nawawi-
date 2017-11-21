@@ -1,3 +1,6 @@
+
+
+
 <?php
 include "config.php";
 session_start();
@@ -16,7 +19,7 @@ $date="";
 $month="";
 $year="";
 $att="";
-
+$att_id="";
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
@@ -27,11 +30,7 @@ if(isset($_POST["query"]))
     $search = mysqli_real_escape_string($conn, $_POST["query"]);
     $query = "
     SELECT * FROM attendance 
-    WHERE att_id LIKE '%".$search."%'
-       OR  st_id LIKE '%".$search."%' 
-       OR studentname LIKE '%".$search."%'
-       OR month LIKE '%".$search."%'
-     OR att LIKE '%".$search."%'
+    WHERE  st_id = ".$search." 
     ";
 }
 else
@@ -100,8 +99,8 @@ if(mysqli_num_rows($result) > 0)
                     <td><?php echo $row["att"] ?></td>
 	                
                     <td>
-                        <button type="submit" class="btn btn-sm"  style="background-color:#671609;color:white"data-toggle="modal" data-target="#edit-<?php echo $row['st_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
-                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['st_id']; ?>">
+                        <button type="submit" class="btn btn-sm"  style="background-color:#671609;color:white"data-toggle="modal" data-target="#edit-<?php echo $row['att_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
+                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['att_id']; ?>" >
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                    <div class="modal-header"style="font-family:elephent">
@@ -114,6 +113,9 @@ if(mysqli_num_rows($result) > 0)
     <form method="POST" action="attendance_update.php" class="form-inline">
     <label> ID : &nbsp;&nbsp;</label>
     <input type="text" name="st_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['st_id']; ?>"> 
+   
+    <input type="hidden" name="att_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['att_id']; ?>"> 
+    
     <label> Name: &nbsp;&nbsp;</label>
     <input style="width:327px ; height:29px; font-size:13px;font-family:verdana;"type="text" name="studentname" id="#edit-<?php echo $row['st_id']; ?>"class="form-control" value="<?php echo $row['studentname']; ?>"><br><br>
                                        
@@ -202,7 +204,7 @@ if(mysqli_num_rows($result) > 0)
                                </div>
                            </div> </div> </div> </td>
                            <td>
-                         <a onclick ="return confirm('are you sure to delete')" href="attendance_update.php?idd=<?php echo $row['st_id'] ?>"  
+                         <a onclick ="return confirm('are you sure to delete')" href="attendance_update.php?idd=<?php echo $row['att_id'] ?>"  
                    class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> Delete</a>
            </td>
                 </tr>

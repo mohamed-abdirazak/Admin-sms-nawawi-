@@ -3,7 +3,7 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
 
   if (isset($_GET['idd'])) {
     $idd = $_GET['idd'];
-    $sql= "DELETE FROM exam WHERE st_id ='$idd'";
+    $sql= "DELETE FROM exam WHERE exam_id ='$idd'";
      if ($conn->query($sql)===TRUE) {?>
         <script>
         alert("data deleted successfuly");
@@ -20,7 +20,8 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
     }
 
     if(isset($_POST['updateexam'])) {
-        $id = $_POST['id'];
+        
+        $exam_id = $_POST['exam_id'];
         $name = "";
         $branch = "";
         $level="";
@@ -62,7 +63,7 @@ $total=$islamic+$arabic+$somali+$english+$math+$science+$social+$geography+$hist
 $average= $total/13;                     
         $sql = "UPDATE exam SET  name= '$name' ,islamic= '$islamic',arabic= '$arabic',somali= '$somali' ,english= '$english'
         ,math= '$math',science= '$science',social= '$social',geography= '$geography' ,history= '$history' ,physics= '$physics'
-        ,biology= '$biology',chemistry= '$chemistry' ,discipline= '$discipline', total='$total', average='$average' WHERE st_id = '$id'";
+        ,biology= '$biology',chemistry= '$chemistry' ,discipline= '$discipline', total='$total', average='$average' WHERE exam_id = '$exam_id'";
         if($conn->query($sql)===TRUE) {
           header("location:table_exam.php");
         }

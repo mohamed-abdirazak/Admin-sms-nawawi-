@@ -3,7 +3,7 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
 
   if (isset($_GET['idd'])) {
     $idd = $_GET['idd'];
-    $sql= "DELETE FROM FEE WHERE st_id ='$idd'";
+    $sql= "DELETE FROM FEE WHERE fee_id ='$idd'";
      if ($conn->query($sql)===TRUE) {?>
         <script>
         alert("data deleted successfuly");
@@ -20,7 +20,8 @@ $conn = new mysqli("localhost", "root", "", "simpledata");
     }
 
     if(isset($_POST['updatefee'])) {
-        $st_id = $_POST['st_id'];
+        $fee_id = $_POST['fee_id'];
+        
         $studentname = "";
         $date = "";
         $month="";
@@ -40,7 +41,7 @@ $amount = $_POST['amount'];
 $recept_no = $_POST['recept_no'];    
         $sql1 = "UPDATE fee SET  studentname= '$studentname' ,date= '$date',month= '$month',money_type= '$money_type' ,
         letters= '$letters',recept_no= '$recept_no'
-        ,remaining= '$remaining',amount= '$amount'WHERE st_id = '$st_id'";
+        ,remaining= '$remaining',amount= '$amount'WHERE fee_id = '$fee_id'";
         if($conn->query($sql1)===TRUE) {
           header("location:fee_table.php");
         }

@@ -5,7 +5,8 @@ if(!isset($_SESSION['username'])){
     header('location:login.php');
 }
 ?>
- <?php
+
+<?php
 $host ="localhost";
 $user = "root";
 $pswd = "";
@@ -13,53 +14,61 @@ $db = "simpledata";
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
+$id="";
+$name = "";
+$branch = "";
+$level="";
+$classname="";
+ $section="";
+$term="";
+$year="";
+$islamic="";
+$arabic="";
+$somali="";
+$english="";
+$math="";
+$science="";
+$social="";
+$geography="";
+$history="";
+$physics="";
+$biology="";
+$chemistry="";
+$discipline="";
+$total=0;
+$average=0;
 
-function getData()
-{
+if(isset($_POST['send'])){
+  $id = $_POST["ID"];
+  $studentname = $_POST["studentname"];
+  $term = $_POST["term"];
+  $year = $_POST["year"];
+  $islamic = $_POST["islamic"];
+  $arabic = $_POST["arabic"];
+  $somali = $_POST["somali"];
+  $english = $_POST["english"];
+  $math = $_POST["math"];
+  $science = $_POST["science"];
+  $social = $_POST["social"];
+  $geography = $_POST["geography"];
+  $history = $_POST["history"];
+  $physics = $_POST["physics"];
+  $biology = $_POST["biology"];
+  $chemistry = $_POST["chemistry"];
+  $discipline = $_POST["discipline"];
+  $total=$islamic+$arabic+$somali+$english+$math+$science+$social+$geography+$history+$physics+$biology+$chemistry+$discipline;
+  $average= $total/13;
+$sql = "INSERT INTO exam(st_id,`name`,term,year,islamic,arabic,somali,english,math,science,social,`geography`,history,physics,biology,
+chemistry,discipline,total,average) 
+VALUES ('$id','$studentname','$term','$year','$islamic','$arabic','$somali','$english','$math','$science','$social','$geography','$history','$physics','$biology','$chemistry','$discipline',$total,$average)";
 
-
-$data =array();
-$data[0] =$_POST['ID'];
-$data[1] =$_POST['studentname'];
-$data[2] =$_POST['term'];
-$data[3] =$_POST['year'];
-$data[4] =$_POST['islamic'];
-$data[5] =$_POST['arabic'];
-$data[6] =$_POST['somali'];
-$data[7] =$_POST['english'];
-$data[8] =$_POST['math'];
-$data[9] =$_POST['science'];
-$data[10] =$_POST['social'];
-$data[11] =$_POST['geography'];
-$data[12] =$_POST['history'];
-$data[13] =$_POST['physics'];
-$data[14] =$_POST['biology'];
-$data[15] =$_POST['chemistry'];
-$data[16] =$_POST['discipline'];
-
-
-return $data;
-}
-if (isset($_POST['send'])) {
-    $info = getData();
-    $sql = "INSERT INTO exam (st_id,name,term,year,islamic,arabic,somali,english,math,science,social,geography,history,physics,biology,
-    chemistry,discipline)
-    VALUES ('$info[0]', '$info[1]', '$info[2]','$info[3]','$info[4]','$info[5]','$info[6]',
-    '$info[7]','$info[8]','$info[9]', '$info[10]', '$info[11]','$info[12]','$info[13]','$info[14]','$info[15]',
-    '$info[16]')";
-    
-      $search_result = mysqli_query($conn,$sql);
-   
-   if ($search_result) {
-     header("location:table_exam.php");
-
-     }
-     else {
-       echo "not inserted";
-     }
-
-
-}
+  if ($conn->query($sql)===TRUE) {
+    header("location:table_exam.php");
+  }
+  else {
+    echo "failed";
+  }
+ }
 
 
 ?>

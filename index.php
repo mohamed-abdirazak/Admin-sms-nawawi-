@@ -234,6 +234,9 @@ if(!isset($_SESSION['username'])){
   <!-- Content Wrapper. Contains page content -->
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
+ <div classs="container-fluid">
+ <div class="row">
+ <div class="col-md-12">
     <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content">
@@ -433,7 +436,8 @@ if(!isset($_SESSION['username'])){
       <!-- /.row -->
     </section>
     <!-- /.content -->
-    
+    </div>
+  </div> </div>
   </div>
   <!-- /.content-wrapper -->
 

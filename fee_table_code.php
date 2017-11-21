@@ -72,7 +72,7 @@ if(mysqli_num_rows($result) > 0)
             <table class="table table-striped table-condensed table-hover table-bordered">
                 <tr>
        <thead style="background-color:#4b9609;color:white; font-size:13px;">
-        <th>Fee_ID</th>
+        
       <th>St_ID</th>
       <th style="padding-right:120px" >StudentName</th>
        <th style="padding-right:7%">date</th>
@@ -94,7 +94,7 @@ if(mysqli_num_rows($result) > 0)
    
    while($row = mysqli_fetch_array($result)){?>
 <tr>
-                <td><?php echo $row['fee_id'] ?></td>
+                
                 <td><?php echo $row['st_id'] ?></td>
                     <td><?php echo $row["studentname"] ?></td>
                     <td><?php echo $row['date'] ?></td>
@@ -105,8 +105,8 @@ if(mysqli_num_rows($result) > 0)
                     <td>$ <?php echo $row["remaining"] ?></td>
                     <td>$ <?php echo $row["amount"] ?></td>
                     <td>
-                        <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['st_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
-                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['st_id']; ?>">
+                        <button type="submit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['fee_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
+                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['fee_id']; ?>">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                    <div class="modal-header"style="font-family:elephent">
@@ -117,14 +117,17 @@ if(mysqli_num_rows($result) > 0)
       </div>
     <div class="modal-body">
     <form method="POST" action="fee_update.php" class="form-inline">
+    
+    <input type="hidden" name="fee_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['fee_id']; ?>"> 
     <label> ID : &nbsp;&nbsp;</label>
     <input type="text" name="st_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['st_id']; ?>"> 
+   
     <label> Name: &nbsp;&nbsp;</label>
     <input style="width:327px ; height:29px; font-size:13px;font-family:verdana;"type="text" name="studentname" id="#edit-<?php echo $row['st_id']; ?>"class="form-control" value="<?php echo $row['studentname']; ?>"><br><br>
                                        
     <div class="form-group">
     <label>Month:</label>&nbsp;
-    <select class="form-control"name="month" style="width:200px ; height:29px; font-size:13px;font-family:verdana;" id="#edit-<?php echo $row['st_id']; ?>" >
+    <select class="form-control"name="month" style="width:200px ; height:29px; font-size:13px;font-family:verdana;" id="#edit-<?php echo $row['fee_id']; ?>" >
     <option><?php echo $row['month'];?></option>
     <option>January</option>
           <option>February</option>
@@ -165,7 +168,7 @@ if(mysqli_num_rows($result) > 0)
                                </div>
                            </div> </div> </div> </td>
                            <td>
-                         <a onclick ="return confirm('are you sure to delete')" href="fee_update.php?idd=<?php echo $row['st_id'] ?>"  
+                         <a onclick ="return confirm('are you sure to delete')" href="fee_update.php?idd=<?php echo $row['fee_id'] ?>"  
                    class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> Delete</a>
            </td>
                 </tr>

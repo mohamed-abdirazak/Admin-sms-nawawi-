@@ -64,7 +64,7 @@ if(mysqli_num_rows($result) > 0)
       <th>Biology</th>
        <th>Chemistry</th>
       <th>Physics</th>
-      <th>Displine</th>
+      <th>Discipline</th>
       <th>Total</th>
       <th>Avarege</th>
       <th>Edit </th>
@@ -92,15 +92,15 @@ if(mysqli_num_rows($result) > 0)
                     <td><?php echo $row["social"] ?></td>
                     <td><?php echo $row["geography"] ?></td>
                      <td><?php echo $row["history"] ?></td>
-                     <td><?php echo $row["physics"] ?></td>
-	                 <td><?php echo $row['biology'] ?></td>
-                    <td><?php echo $row["chemistry"] ?></td>
+                     <td><?php echo $row["biology"] ?></td>
+	                 <td><?php echo $row['chemistry'] ?></td>
+                    <td><?php echo $row["physics"] ?></td>
                     <td><?php echo $row["discipline"] ?></td>
                     <td><?php echo $row["total"] ?></td>
                     <td><?php echo $row["average"] ?> %</td>
                     <td>
-                        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['st_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
-                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['st_id']; ?>">
+                        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['exam_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
+                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['exam_id']; ?>">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                    <div class="modal-header">
@@ -113,12 +113,11 @@ if(mysqli_num_rows($result) > 0)
     <form method="POST" action="update.php" class="form-inline">
     <label> ID : &nbsp;&nbsp;</label>
     <input type="text" name="id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['st_id']; ?>"> 
+   
+    <input type="hidden" name="exam_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['exam_id']; ?>"> 
+   
     <label> Name: &nbsp;&nbsp;</label>
     <input style="width:327px ; height:29px; font-size:13px;font-family:verdana;"type="text" name="name" id="#edit-<?php echo $row['st_id']; ?>"class="form-control" value="<?php echo $row['name']; ?>"><br><br>
-                                       
-    
-    
-    
     <div class="form-group">
     <label>Year:</label>&nbsp;
     <select class="form-control"name="year" style="width:120px ; height:29px; font-size:13px;font-family:verdana;">
@@ -197,7 +196,7 @@ if(mysqli_num_rows($result) > 0)
                                </div>
                            </div> </div> </div> </td>
                            <td>
-                         <a onclick ="return confirm('are you sure to delete')" href="update.php?idd=<?php echo $row['st_id'] ?>"  
+                         <a onclick ="return confirm('are you sure to delete')" href="update.php?idd=<?php echo $row['exam_id'] ?>"  
                    class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> Delete</a>
            </td>
                 </tr>
