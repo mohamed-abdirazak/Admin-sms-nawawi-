@@ -509,8 +509,8 @@ if ($result->num_rows > 0) {
            <td><?php echo $row["total"] ?></td>
            <td><?php echo $row["average"] ?> %</td>
            <td>
-               <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['st_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
-               <div class="modal fade" role="dialog" id="edit-<?php echo $row['st_id']; ?>">
+               <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-<?php echo $row['exam_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
+               <div class="modal fade" role="dialog" id="edit-<?php echo $row['exam_id']; ?>">
                    <div class="modal-dialog">
                        <div class="modal-content">
                           <div class="modal-header">
@@ -521,6 +521,7 @@ if ($result->num_rows > 0) {
 </div>
 <div class="modal-body">
 <form method="POST" action="update.php" class="form-inline">
+<input type="hidden" name="exam_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['exam_id']; ?>"> 
 <label> ID : &nbsp;&nbsp;</label>
 <input type="text" name="id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['st_id']; ?>"> 
 <label> Name: &nbsp;&nbsp;</label>

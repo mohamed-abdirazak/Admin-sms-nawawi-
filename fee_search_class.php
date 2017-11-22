@@ -265,6 +265,7 @@ $id=$rows['amount'];
           <li><a href="attendance_person.php"><i class="fa fa-file"></i>Attendance indivitual</a></li>
           <li><a href="attendance_table.php"><i class="fa fa-table"></i>Attendance list </a></li>
           <li><a href="student_attendance.php"><i class="fa fa-table"></i>Attendance by class </a></li>
+          <li><a href=" attendance_search_class.php"><i class="fa fa-search" style="color:#00bcd8"></i>Attendance Search (Class) </a></li>
       </ul>
         </li>
         <li class="treeview">
@@ -399,8 +400,8 @@ if ($result->num_rows > 0) {
           <td><?php echo $row['amount'] ?></td>
         
            <td>
-               <button type="submit" class="btn btn-primary btn-sm" style="background-color:#dc9408" data-toggle="modal" data-target="#edit-<?php echo $row['st_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
-               <div class="modal fade" role="dialog" id="edit-<?php echo $row['st_id']; ?>">
+               <button type="submit" class="btn btn-primary btn-sm" style="background-color:#dc9408" data-toggle="modal" data-target="#edit-<?php echo $row['fee_id']; ?>" id=""><i class="fa fa-pencil fa-sm"></i> Edit</button>
+               <div class="modal fade" role="dialog" id="edit-<?php echo $row['fee_id']; ?>">
                    <div class="modal-dialog">
                        <div class="modal-content">
                           <div class="modal-header">
@@ -411,6 +412,7 @@ if ($result->num_rows > 0) {
 </div>
 <div class="modal-body">
 <form method="POST" action="fee_class_update.php" class="form-inline">
+<input type="hiddden" name="fee_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['fee_id']; ?>"> 
 <label> ID : &nbsp;&nbsp;</label>
 <input type="text" name="st_id" id="#edit-<?php echo $row['st_id']; ?>"style="width:120px ; height:29px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['st_id']; ?>"> 
 <label> Name: &nbsp;&nbsp;</label>
@@ -456,7 +458,7 @@ if ($result->num_rows > 0) {
                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                            </div>
                        </div> </div> </div> 
-                     <a onclick ="return confirm('are you sure to delete')" href="class_update.php?idd=<?php echo $row['st_id'] ?>"  
+                     <a onclick ="return confirm('are you sure to delete')" href="fee_class_update.php?idd=<?php echo $row['fee_id'] ?>"  
                class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> Delete</a>
        </td>
           

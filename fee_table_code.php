@@ -77,7 +77,7 @@ if(mysqli_num_rows($result) > 0)
       <th style="padding-right:120px" >StudentName</th>
        <th style="padding-right:7%">date</th>
        <th style="padding-right:7%">ReceptNO</th>
-        <th>month</th>
+      <th>month</th>
       <th>MoneyType</th>
       <th style="padding-right:9%" >Letters</th>
        <th>Remaining</th>
