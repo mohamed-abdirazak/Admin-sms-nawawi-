@@ -25,6 +25,7 @@ if(!isset($_SESSION['username'])){
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
        <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+       <link rel="stylesheet" href="dist/css/google.css">
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <!-- Google Font -->
 </head>
