@@ -419,19 +419,19 @@ $id=$rows['att'];
                     <button class="btn btn-primary"type="submit" name="attendance_class_search">
                         <span class="glyphicon glyphicon-search"></span></button> 
                         </div> </div> </form>
-  <h3>Attendacne by class</h3>
+  <h3>Attendance by class</h3>
   <div class="table-responsive">        
   <table class="table table-bordered table-hover table-striped"id="table">
     <thead style="background-color:#ac6007; ; color:white ; font-size:12px" >
       <tr>
       
-        <th>St_id</th>
-        <th style="padding-right:13%">Studentname</th>
-        <th>Date</th>
-        <th>Year</th>
-        <th>Month</th>
-        <th>Attendance</th>
-        <th style="padding-right:15%">Action</th>
+        <th >St_id</th>
+        <th width="25%">Studentname</th>
+        <th width="10%">Date</th>
+        <th  width="12%">Year</th>
+        <th  width="10%">Month</th>
+        <th width="15%">Attendance</th>
+        <th>Action</th>
       </tr>
       <tbody style=" font-family:verdana; font-size:12px">
      <?php

@@ -4,8 +4,8 @@ $image="";
 
 if(isset($_GET['idDelete'])){
         $idDelete = $_GET['idDelete'];
-        $sql = "delete from registration where ID='$idDelete'";
-        if($conn->query($sql)===true) {?>
+        $sql = "DELETE FROM registration WHERE ID='$idDelete'";
+        if($conn->query($sql)===TRUE) {?>
           <script>
           alert("success to delete");
           window.location.href='modifyy.php';
@@ -28,7 +28,7 @@ if(isset($_GET['idDelete'])){
       if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
       //  unlink('/'.$_POST['old_image']);
         $msg = "Image uploaded successfully";
-    
+      }
         $updateID = $_POST['cusId'];
         $gender = "";
         $studentname = "";
@@ -69,7 +69,10 @@ $image="";
                                    $nationality = $_POST['nationality'];
                                      $registrationdate = $_POST['registrationdate'];
                                       
-        $sql = "UPDATE registration SET studentname= '$studentname', gender= '$gender',mothername= '$mothername',
+        $sql = "UPDATE registration SET 
+         studentname= '$studentname'
+        ,gender= '$gender'
+        ,mothername= '$mothername',
         guardianname= '$guardianname'
         ,guardianrelation= '$guardianrelation'
         ,guardiantell= '$guardiantell'
@@ -97,7 +100,7 @@ $image="";
             </script><?php
         }
       }   
-      }
+      
       
     
 ?>

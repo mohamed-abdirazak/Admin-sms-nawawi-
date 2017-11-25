@@ -108,7 +108,7 @@
         </button>
       </div>
                                     <div class="modal-body">
-                                        <form method="post" enctype="multipart/form-data">
+                                        <form method="post" action="" enctype="multipart/form-data">
                                         <label> ID : </label>
                                             <input type="text" name="cusId" id="#edit-<?php echo $row['ID']; ?>"style="width:430px ; height:31px; font-size:13px;font-family:verdana;" class="form-control" value="<?php echo $row['ID']; ?>"><br>
                                             <label> Student name : </label>
@@ -399,7 +399,7 @@
 <!-- <imgsrc="#" /></label><br><br> -->
       
 <br><br>
-                                            <button type="submit" class="btn btn-success" name="update_customer" id="#edit-<?php echo $row['id']; ?>">Update</button>
+                                            <button type="submit" class="btn btn-success" name="update_customer">Update</button>
                                      
                                         </form>
                                     </div>
