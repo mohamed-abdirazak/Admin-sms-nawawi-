@@ -265,9 +265,9 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>47<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Bounce Rate</p>
+              <p>Student Female</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -331,7 +331,7 @@ if(!isset($_SESSION['username'])){
             <div class="inner">
               <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Bounce Rate</p>
+              <p>Student Male</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
