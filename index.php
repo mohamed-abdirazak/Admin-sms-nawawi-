@@ -249,12 +249,24 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
-              <h3>150 </h3>
+              <h3> <?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3>
 
               <p>All Students</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person"></i>
+              <i class="ion ion-person-add"></i>
+             
             </div>
             <a href="modifyy.php" class="small-box-footer">More info students <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -265,14 +277,25 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>47<sup style="font-size: 20px">%</sup></h3>
+              <h3> <?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration where gender='female'";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?><sup style="font-size: 20px"></sup></h3>
 
               <p>Student Female</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-female"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="modifyy.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -280,61 +303,70 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
-
-              <p>User Registrations</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>65</h3>
-
-              <p>Unique Visitors</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-      <!-- /.row -->
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>150</h3>
-
-              <p>New Orders</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration where gender='male'";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?><sup style="font-size: 20px"> </sup></h3>
 
               <p>Student Male</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-male"></i>
+            </div>
+            <a href="modifyy.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+            <h3>REG</h3>
+
+              <p>Student Registration</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-android-add-circle"></i>
+            </div>
+            <a href="register.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <!-- /.row -->
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+            <h3><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration where branch='nawawi'";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3>
+
+              <p>All Student Nawawi</p>
+             
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-stalker"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -342,14 +374,53 @@ if(!isset($_SESSION['username'])){
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
+          <div  class="small-box bg-green">
             <div class="inner">
-              <h3>44</h3>
+              <h3 ><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration where branch='raxma'";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3>
 
-              <p>User Registrations</p>
+
+              <p>All Student Raxma</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-person-stalker"></i>
+            </div>
+            <a href="register.php" class="small-box-footer">Click here   <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(ID) as ID from registration where branch='ridwaan'";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3>
+
+
+              <p>All Student Ridwan</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-stalker"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -359,12 +430,23 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>$<?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select SUM(amount) as amount from fee ";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["amount"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3>
 
-              <p>Unique Visitors</p>
+              <p>Total Fee</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="ion ion-bag"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -376,14 +458,25 @@ if(!isset($_SESSION['username'])){
             <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
+          <div class="small-box bg-blue">
             <div class="inner">
-              <h3>150</h3>
+              <h3><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="SELECT MAX(average)  AS total FROM `exam` ";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["total"];?></span><sup style="font-size: 20px">%</sup>
+                               <?php
+                                 
+                               }
+                             }
+                            ?></h3> 
 
-              <p>New Orders</p>
+              <p>highest Student</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-stats-bars"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -393,9 +486,20 @@ if(!isset($_SESSION['username'])){
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3><?php
+                             $con=mysqli_connect("localhost","root","","simpledata");
+                             $sql="select count(t_id) as ID from teacher ";
+                             $result = $con->query($sql);
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){?>
+                               <span class="showrow"><?php echo $row["ID"];?></span>
+                               <?php
+                                 
+                               }
+                             }
+                            ?><sup style="font-size: 20px"> </sup></h3>
 
-              <p>Bounce Rate</p>
+              <p>All Teachers</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
