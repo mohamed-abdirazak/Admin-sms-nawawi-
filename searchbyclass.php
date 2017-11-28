@@ -179,7 +179,7 @@ $id=$rows['image'];
         <th>Gender</th>
         <th  style="padding-right:100px">Mothername</th>
         <th  style="padding-right:100px">Gurdianname</th>
-       <td> Gardian relation</td>
+       <td> Gardianrelation</td>
         <th>Guardiantell</th>
         <th>Guardianoccupation</th>
         <th>POB</th>

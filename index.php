@@ -295,7 +295,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-female"></i>
             </div>
-            <a href="modifyy.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="modifyy.php" class="small-box-footer">Student Info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -321,7 +321,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-male"></i>
             </div>
-            <a href="modifyy.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="modifyy.php" class="small-box-footer">Student Info  <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -337,7 +337,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-android-add-circle"></i>
             </div>
-            <a href="register.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="register.php" class="small-box-footer">Student Registration  <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -347,7 +347,7 @@ if(!isset($_SESSION['username'])){
             <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-blue">
+          <div class="small-box bg-green">
             <div class="inner">
             <h3><?php
                              $con=mysqli_connect("localhost","root","","simpledata");
@@ -368,13 +368,13 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="searchclass.php" class="small-box-footer">Student Info  <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div  class="small-box bg-green">
+          <div  class="small-box bg-blue">
             <div class="inner">
               <h3 ><?php
                              $con=mysqli_connect("localhost","root","","simpledata");
@@ -395,13 +395,13 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
             </div>
-            <a href="register.php" class="small-box-footer">Click here   <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="searchclass.php" class="small-box-footer">Student Info   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
+          <div class="small-box bg-red">
             <div class="inner">
               <h3><?php
                              $con=mysqli_connect("localhost","root","","simpledata");
@@ -422,13 +422,13 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="searchclass.php" class="small-box-footer">Student Info   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-yellow">
             <div class="inner">
               <h3>$<?php
                              $con=mysqli_connect("localhost","root","","simpledata");
@@ -448,7 +448,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="fee_table.php" class="small-box-footer">Fee Information   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -478,7 +478,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="table_exam.php" class="small-box-footer">Exam Table    <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -504,7 +504,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="teacher_table.php" class="small-box-footer">Teacher infotmation   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
