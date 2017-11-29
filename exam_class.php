@@ -528,7 +528,18 @@ if ($result->num_rows > 0) {
 <input style="width:327px ; height:29px; font-size:13px;font-family:verdana;"type="text" name="name" id="#edit-<?php echo $row['st_id']; ?>"class="form-control" value="<?php echo $row['studentname']; ?>"><br><br>
 <div class="form-group">
 <label>Year:</label>&nbsp;
-<select class="form-control"name="year" style="width:120px ; height:29px; font-size:13px;font-family:verdana;">
+<select class="form-control"name="year" style="width:120px ; height:29px; font-size:13px;font-family:verdana;" id="#edit-<?php echo $row['st_id']; ?>">
+<option><?php echo $row['year']; ?></option>
+<option> 1990/1991 </option>
+   <option> 1991/1992 </option>
+   <option> 1992/1993 </option>
+   <option> 1993/1994 </option>
+   <option> 1994/1995 </option>
+   <option> 1995/1996 </option>
+   <option> 1996/1997 </option>
+   <option> 1997/1998 </option>
+   <option> 1998/1999 </option>
+   <option> 1999/2000 </option>
 <option>2000/2001</option>
 <option>2001/2002</option>
 <option>2002/2003</option>
@@ -557,7 +568,8 @@ if ($result->num_rows > 0) {
 </div>&nbsp;&nbsp;
 <div class="form-group">
 <label>Term:</label>&nbsp;&nbsp;
-<select class="form-control"style="width:325px ; height:29px; font-size:13px;font-family:verdana;" name="term">
+<select class="form-control"style="width:325px ; height:29px; font-size:13px;font-family:verdana;" name="term" id="#edit-<?php echo $row['st_id']; ?>"> 
+<option><?php echo $row['term']; ?></option>
 <option>Term one</option>
 <option>Term two</option>
 </select>

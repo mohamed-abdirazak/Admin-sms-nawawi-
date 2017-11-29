@@ -236,8 +236,8 @@ if(!isset($_SESSION['username'])){
   <!-- Content Wrapper. Contains page content -->
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
- <div classs="container-fluid">
- 
+ <div class="container-fluid">
+ <div class="row">
  <div class="col-md-12">
     <!-- Content Header (Page header) -->
     <!-- Main content -->
@@ -504,7 +504,7 @@ if(!isset($_SESSION['username'])){
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="teacher_table.php" class="small-box-footer">Teacher infotmation   <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="teacher_table.php" class="small-box-footer">Teacher information   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -542,12 +542,11 @@ if(!isset($_SESSION['username'])){
       <!-- /.row -->
     </section>
     <!-- /.content -->
-    </div>
+    
+    </div>  </div>
   </div>
   </div>
   <!-- /.content-wrapper -->
-
-
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -563,5 +562,6 @@ if(!isset($_SESSION['username'])){
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
 </body>
 </html>
