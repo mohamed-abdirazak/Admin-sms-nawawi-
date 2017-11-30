@@ -70,8 +70,8 @@ if (isset($_POST['send'])) {
   
   <link rel="stylesheet" href="bootstrap.min.css">
            <script src="bootstrap.min.js"> </script>
-           <link rel="stylesheet" href="font.css">
-           <link rel="stylesheet" href="nawawi.css">
+           
+           
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
            
            <style>

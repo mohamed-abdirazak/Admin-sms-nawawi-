@@ -189,8 +189,8 @@ $id=$rows['att'];
         </a>
         <ul class="treeview-menu">
           <li><a href="register.php"><i class="fa fa-user-plus"  style="color:white"></i> Registration</a></li>
-          <li><a href="searchsbyid.php"><i class="fa fa-search" style="color:red"></i> student search: (BYID)</a></li>
-          <li><a href="searchclass.php"><i class="fa fa-search-plus" style="color:#f661d8" ></i> search: (by class)</a></li>
+          <li><a href="searchsbyid.php"><i class="fa fa-search" style="color:red"></i>  search by ID</a></li>
+          <li><a href="searchclass.php"><i class="fa fa-search-plus" style="color:#f661d8" ></i> search by class</a></li>
           <li><a href="modifyy.php"><i class="fa fa-reorder" style="color:#fcff14" ></i> Student list</a></li>
         </ul>
       </li>
@@ -204,8 +204,8 @@ $id=$rows['att'];
           <ul class="treeview-menu">
             <li><a href="exam.php"><i class="fa fa-plus-square-o"   style="color:white"></i> Exam Register</a></li>
             <li><a href="table_exam.php"><i class="fa fa-table"  style="color:#dbed79"></i>  Exam List </a></li>
-            <li><a href="exam_person.php"><i class="fa fa-edit"  style="color:#f661d8"></i>  Exam Register: (indivital)</a></li>
-            <li><a href="exam_class.php"><i class="fa fa-search"  style="color:#fcff14"></i>  Exam Search: (by class)</a></li>
+            <li><a href="exam_person.php"><i class="fa fa-edit"  style="color:#f661d8"></i> Register indivital</a></li>
+            <li><a href="exam_class.php"><i class="fa fa-search"  style="color:#fcff14"></i> Search by class</a></li>
           </ul>
         </li>
       <li class="treeview">
@@ -218,8 +218,8 @@ $id=$rows['att'];
         </a>
         <ul class="treeview-menu">
         <li><a href="fee_setup.php"><i class="fa fa-money"  style="color:lightgreen"></i> Fee register</a></li>
-        <li><a href="fee_group.php"><i class="fa fa-file-text"  style="color:#ffc845"></i> Fee register (Class) </a></li>
-        <li><a href="fee_search_class.php"><i class="fa fa-search" style="color:#f661d8"></i>  Fee search (by class)</a></li>
+        <li><a href="fee_group.php"><i class="fa fa-file-text"  style="color:#ffc845"></i>  register Class </a></li>
+        <li><a href="fee_search_class.php"><i class="fa fa-search" style="color:#f661d8"></i>  search by class</a></li>
         <li><a href="fee_table.php"><i class="fa fa-clone" style="color:#fcff14"></i>  Fee table </a></li>
     </ul>
       </li>
@@ -262,7 +262,7 @@ $id=$rows['att'];
         <li><a href="attendance_person.php"><i class="fa fa-check-square-o" style="color:#f661d8"></i>Attendance indivitual</a></li>
         <li><a href="attendance_table.php"><i class="fa fa-building-o" style="color:#fcff14"></i>Attendance list </a></li>
         <li><a href="student_attendance.php"><i class="fa fa-check" style="color:#00ffd8"></i>Attendance by class </a></li>
-        <li><a href=" attendance_search_class.php"><i class="fa fa-search" style="color:#00bcd8"></i>Attendance Search (Class) </a></li>
+        <li><a href=" attendance_search_class.php"><i class="fa fa-search" style="color:#00bcd8"></i> Search by  Class </a></li>
        
 
     </ul>
@@ -277,7 +277,7 @@ $id=$rows['att'];
         </a>
         <ul class="treeview-menu">
             <li><a href="time.php"><i class="fa fa-comment-o" style="color:#00ffd8"></i>Time table Setup</a></li>
-            <li><a href="time_table_class_search.php"><i class="fa fa-table"style="color:#c6ff00"></i>Time Table  search class</a></li>
+            <li><a href="time_table_class_search.php"><i class="fa fa-table"style="color:#c6ff00"></i> search class</a></li>
         </ul>
       </li>
     </ul>
