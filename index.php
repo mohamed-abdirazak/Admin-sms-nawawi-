@@ -446,7 +446,7 @@ if(!isset($_SESSION['username'])){
               <p>Total Fee</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-cash"></i>
             </div>
             <a href="fee_table.php" class="small-box-footer">Fee Information   <i class="fa fa-arrow-circle-right"></i></a>
           </div>
