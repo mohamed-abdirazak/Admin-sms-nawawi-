@@ -10,7 +10,7 @@ if(isset($_GET['idDelete'])){
           alert("success to delete");
           window.location.href='modifyy.php';
       </script>
-        }
+        <?php }
         else { ?>
             <script>
                 alert("failed to delete");
@@ -93,7 +93,7 @@ $image="";
             <script>
                 alert("success to update");
                 window.location.href='modifyy.php';
-            </script><?php}
+            </script><?php }
         else {?>
             <script>
             alert("Failed to update");

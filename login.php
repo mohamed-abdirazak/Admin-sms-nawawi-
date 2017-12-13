@@ -35,7 +35,7 @@
                             <h1 style="color:#f5c960;font-weight:bold"><strong>Nawawi school</strong> </h1>
                             <div class="description">
                             	<p>
-	                        <h1>Login Form</h1>
+	                        
                                     </p>
                             </div>
                         </div>
